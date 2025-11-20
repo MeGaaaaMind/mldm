@@ -31,9 +31,9 @@
 1. Run in Google Colab (GPU recommended) and mount Drive.
 2. Verify the dataset paths and optional checkpoint folder under `MyDrive`.
 3. Execute preprocessing cells to validate images and create augmented `ImageDataGenerator` loaders.
-4. Train the CNN (3 Conv blocks + dense head, Adam optimizer, dropout, checkpoints, early stopping).  
-5. Evaluate on the held-out test split: accuracy ≈ 95–96%, confusion matrix, classification report, and qualitative prediction grids.
-6. Optional: load pre-trained weights from the Drive link in `code/model file link`.
+4. Skip the CNN training module and proceed directly to the module code 
+5. Load the correct pre-trained model and evaluate metrics; accuracy ≈ 95–96%, confusion matrix, classification report, and qualitative prediction grids.
+
 
 ## Results 
 - **Tabular Random Forest:** RMSE ≈ 1.38 (log scale), R² ≈ 0.72 on test data; remoteness and location dominate importance.
