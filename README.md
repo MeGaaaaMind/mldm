@@ -1,4 +1,4 @@
-# Wildfire ML & DM
+# Wildfire detection and severity prediction
 
 ## Overview
 - Tabular modeling notebook predicts wildfire size (in hectares) from environmental attributes.
