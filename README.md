@@ -1,4 +1,4 @@
-# Wildfire detection and severity prediction
+# Wildfire detection and burned area prediction
 
 ## Overview
 - Tabular modeling notebook predicts wildfire size (in hectares) from environmental attributes.
