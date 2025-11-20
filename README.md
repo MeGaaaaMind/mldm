@@ -36,11 +36,27 @@
 5. Load the correct pre-trained model and evaluate metrics; accuracy ≈ 95–96%, confusion matrix, classification report, and qualitative prediction grids.
 
 ## mlp.py 
-- Purpose: train and evaluate a simple MLP on the processed tabular data to predict log-transformed `fire_size`.
-- Expectations: input uses the same preprocessing pipeline as `Tabular_code.ipynb` (numeric scaling, categorical encoding, log1p target).
-- Features:
-  - Configurable architecture and training hyperparameters (hidden layer sizes, activation, epochs, batch size, learning rate) via command-line flags or constants inside the script.
-  - Saves trained model and basic metrics (RMSE, MAE, R²) to disk for quick comparison with other models.
+Purpose: Train and evaluate a Multi-Layer Perceptron (MLP) on the Forest Fire dataset to classify images into 3 categories: Smoke, Fire, and Non-fire.
+
+Expectations: Input data consists of raw image files organized by class folders. The script handles resizing (64x64), normalization (1./255), and flattening automatically.
+
+Key Features:
+
+1. Architecture: Implements a "pure" MLP architecture (Flatten → Dense) without Convolutional layers, serving as a baseline for performance comparison.
+
+2. Regularization: Utilizes Batch Normalization, L2 Regularization, and Dropout to mitigate overfitting on high-dimensional pixel data.
+
+3. Pipeline: Includes a high-performance data pipeline that caches images to local storage for rapid GPU training.
+
+4. Analysis: Automatically generates and saves comprehensive evaluation metrics, including:
+
+5. Training History Plots (Accuracy/Loss)
+
+6. Confusion Matrix & Classification Report
+
+7. ROC Curves (One-vs-Rest)
+
+8. Visualizations of Misclassified Examples
 
 ## Results 
 - **Tabular Random Forest:** RMSE ≈ 1.38 (log scale), R² ≈ 0.72 on test data; remoteness and location dominate importance.
